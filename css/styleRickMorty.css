@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 8px;
+    margin-left: 5px;
+    width: 50px;
+    border: solid 2px white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+body {
+    background-image: url("../images/FUNDO_3.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-attachment: fixed;
+    background-size: 100vw;
+   }
+
+.title {
+    color: green;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 35px;
+    /* font-family: 'Roboto Mono', monospace; */
+}
+
+.title h1 {
+    margin-bottom: 5px;
+}
+
+.sectionSearchBar {
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 50px;
+    width: 700px;
+}
+
+.sectionSearchBar:hover {
+    border: 3px solid green;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    width: 640px;
+    height: 40px;
+}
+
+/* Serve para tirar a borda quando o campo é selecionado */
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.material-symbols-outlined {
+  padding: 0;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    padding: 1px;
+}
+
+/* .divCard {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: 900px;  
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+} */
+
+.cardPablo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
+    margin: 10px;
+    padding: 5px;
+    background-color: antiquewhite;
+}
+
+.cardImage {
+    width: 200px;
+}
+
+.cardText {
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+    color: gray;
+}
+
+.cardTitle {
+    margin-top: 10px;
+    color: green;
+}
+
+.infoCard {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.separator {
+    height: 1px;
+    background-color: #AAE6A0;
+    grid-column: span 2;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 2px;
+  }
+  
+  /* Estilo para os botões de página */
+  .pagination button {
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .pagination div {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: green;
+    font-weight: bold;
+  }
+
+.footerData {
+    padding: 40px
+}
+
+.devText {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.linkDev {
+    color: white;
+}
+
+
+footer {
+    margin-top: 20px;
+    background-color: #1c331f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 50;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(163, 178, 168);
+  }
