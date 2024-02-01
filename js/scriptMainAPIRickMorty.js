@@ -90,8 +90,8 @@ async function cardBuilder(characters) {
         allCharacters.classList.add('divCard')
 
           allCharacters.innerHTML += `
-          <div class="col-6 mb-4">
-            <div class="card" style="width: 18rem;">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card">
               <img src="${character.image}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${character.name}</h5>
