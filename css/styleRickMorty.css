@@ -64,42 +64,30 @@ body {
     animation: letterJump 0.5s linear 0.4s infinite  alternate;
 }
 
-.sectionSearchBar {
-    position: relative;
-    margin: 0 auto;
-    border: 2px solid black;
-    border-radius: 20px;
-    height: 50px;
-    width: 700px;
-}
-
-.sectionSearchBar:hover {
-    border: 3px solid green;
-}
-
 input {
     border: none;
     border-radius: 10px;
-    width: 640px;
-    height: 40px;
+    width: 50vw;
+    height: 45px;
+    border: solid 1px rgb(46,255,88);
 }
+
+input::placeholder {
+    color: #1c331f;
+}
+
 
 /* Serve para tirar a borda quando o campo é selecionado */
 input:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
+box-shadow: 0 0 0 0;
+outline: 0;
 }
 
 .material-symbols-outlined {
   padding: 0;
   vertical-align: middle;
   font-size: 30px;
-}
-
-.btn {
-    background-color: white;
-    border: none;
-    padding: 1px;
+  color: rgb(46,255,88);
 }
 
 .cardBody {

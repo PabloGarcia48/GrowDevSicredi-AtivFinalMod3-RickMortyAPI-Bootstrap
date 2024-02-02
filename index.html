@@ -48,15 +48,18 @@
                         </div>
                     </div>
                 </div>
-                <section class="container sectionSearchBar">
-                    <form action="">
-                        <input type="search" oninput="fetchCharacters(), makePaginationInvisible()" id="search" name="search" placeholder="Pesquise"/>
+                <section class="container">
+                    <form>
+                        <!-- <input type="search" oninput="fetchCharacters(), makePaginationInvisible()" id="search" name="search" placeholder="Pesquise"/>
                         <button type="submit" id="searchBTN" class="btn"><span class="material-symbols-outlined">
                             search
-                        </span></button>
+                        </span></button> 
+                     -->
                         <div class="input-group mb-3">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
-                            <input type="text" class="form-control" placeholder="Pesquise" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <button class="btn btn-outline-success" type="button" id="searchBTN">
+                                <span class="material-symbols-outlined">search</span>
+                            </button>
+                            <input type="search" oninput="fetchCharacters(), makePaginationInvisible()" id="search" name="search" class=" bg-transparent" placeholder="Pesquise">
                           </div>
                     </form>
                 </section>
