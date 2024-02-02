@@ -5,12 +5,15 @@
 
 .logo {
     position: fixed;
-    margin-top: 8px;
-    margin-left: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
     width: 50px;
     border: solid 2px white;
     background-color: white;
     border-radius: 50%;
+
+	animation: logoPulse 2s ease-out infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
 body {
@@ -21,19 +24,43 @@ body {
     background-size: 100vw;
    }
 
-.title {
+   .title {
     color: green;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 35px;
     /* font-family: 'Roboto Mono', monospace; */
 }
 
-.title h1 {
-    margin-bottom: 5px;
+.rowTitle {
+    width: 40%;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 5px;
+   }
+
+.titleWord1 {
+    animation: letterJump 0.5s linear  infinite  alternate;
+}
+
+.titleWord2 {
+    animation: letterJump 0.5s linear 0.1s infinite  alternate;
+}
+
+.titleWord3 {
+    animation: letterJump 0.5s linear 0.2s infinite  alternate;
+}
+
+.titleWord4 {
+    animation: letterJump 0.5s linear 0.3s infinite  alternate;
+}
+
+.titleWord5 {
+    animation: letterJump 0.5s linear 0.4s infinite  alternate;
 }
 
 .sectionSearchBar {
@@ -74,22 +101,16 @@ input:focus {
     padding: 1px;
 }
 
-/* .divCard {
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    width: 900px;  
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
+.cardGlow {
+    -webkit-box-shadow:0px 0px 3px 3px rgba(46,255,88,0.9);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(46,255,88,0.9);
+    box-shadow: 0px 0px 3px 3px rgba(46,255,88,0.9);
+}
 
-.cardPablo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: 1fr 2fr;
-    margin: 10px;
-    padding: 5px;
-    background-color: antiquewhite;
+.cardGlow:hover {
+    -webkit-box-shadow:0px 0px 15px 13px rgba(46,255,88,0.9);
+    -moz-box-shadow: 0px 0px 15px 13px rgba(46,255,88,0.9);
+    box-shadow: 0px 0px 15px 13px rgba(46,255,88,0.9);
 }
 
 .cardImage {
@@ -107,7 +128,7 @@ input:focus {
     color: green;
 }
 
-.infoCard {
+.cardInfo {
     color: black;
     font-weight: bold;
     margin-bottom: 15px;
@@ -165,7 +186,6 @@ input:focus {
     color: white;
 }
 
-
 footer {
     margin-top: 20px;
     background-color: #1c331f;
@@ -175,4 +195,32 @@ footer {
     padding: 10px;
     text-align: center;
     color: rgb(163, 178, 168);
+  }
+
+  /* -------- ANIMATIONS -------- */
+
+  @keyframes logoPulse {
+	0% {
+		transform: scale(0.7);
+		box-shadow: 0 0 0 0 rgba(46,255,88, 1);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(46,255,88, 0.5);
+	}
+
+	100% {
+		transform: scale(0.7);
+		box-shadow: 0 0 0 0 rgba(46,255,88, 0);
+	}
+  }
+
+  @keyframes letterJump {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
   }

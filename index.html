@@ -22,23 +22,47 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="./images/RICK_MORTY_ICON-01.svg" alt="Rick and Morty black white logo" srcset="">
+        <a href="https://github.com/PabloGarcia48" target="_blank">
+            <img class="logo" src="./images/RICK_MORTY_ICON-01.svg" alt="LogoNotFound" srcset="Rick and Morty black white logo">
+        </a>
     </header>
     
         <main>
-            <div class="title">
-                    <h1>API de RICK and Morty</h1>
-                <section class="sectionSearchBar">
+            <div class="container title fs-1 w-100">
+                <div class="rowTitle">
+                    <div class="row">
+                        <div class="col">
+                            <div class="titleWord1">API</div>
+                        </div>
+                        <div class="col">
+                            <div class="titleWord2">-</div>
+                        </div>
+                        <div class="col">
+                            <div class="titleWord3">RICK</div>
+                        </div>
+                        <div class="col">
+                            <div class="titleWord4">and</div>
+                        </div>
+                        <div class="col">
+                            <div class="titleWord5">Morty</div>
+                        </div>
+                    </div>
+                </div>
+                <section class="container sectionSearchBar">
                     <form action="">
                         <input type="search" oninput="fetchCharacters(), makePaginationInvisible()" id="search" name="search" placeholder="Pesquise"/>
                         <button type="submit" id="searchBTN" class="btn"><span class="material-symbols-outlined">
                             search
                         </span></button>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+                            <input type="text" class="form-control" placeholder="Pesquise" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                          </div>
                     </form>
                 </section>
             </div>
             
-            <div class="container">
+            <div class="container mt-5 ">
                 <div id="divCards" class="row">
 
                 </div>
