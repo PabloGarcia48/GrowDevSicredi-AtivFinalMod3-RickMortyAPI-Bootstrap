@@ -6,7 +6,7 @@ let totalPages = 42
 const prevPage = document.getElementById('prevPage')
 const nextPage = document.getElementById('nextPage')
 const pagination = document.getElementById('pagination')
-const trafficLightCard = document.getElementById('pagination')
+const trafficLightCard1 = document.getElementById('trafficLightCard')
 
 function makePaginationInvisible() {
   const search = document.getElementById("search").value
@@ -92,10 +92,10 @@ async function cardBuilder(characters) {
 
           allCharacters.innerHTML += `
           <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
-            <div class="card h-100 cardGlow" id="trafficLightCard">
+            <div class="card h-100 cardGlow bg-transparent" id="trafficLightCard">
               <img src="${character.image}" class="card-img-top" alt="ImageNotFound">
-              <div class="card-body">
-                <h5 class="card-title">${character.name}</h5>
+              <div class="card-body cardBody">
+                <h4 class="cardTitle">${character.name}</h4>
                 <p class="cardText cardInfo">${trafficLight} ${character.status} - ${character.species}</p>
                 <p class="cardText" >Última localização conhecida</p>
                 <p class="cardText cardInfo" >${character.location.name}</p>

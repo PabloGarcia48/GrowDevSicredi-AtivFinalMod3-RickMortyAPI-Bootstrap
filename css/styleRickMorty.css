@@ -17,6 +17,7 @@
 }
 
 body {
+    background-color: black;
     background-image: url("../images/FUNDO_3.jpg");
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -25,7 +26,7 @@ body {
    }
 
    .title {
-    color: green;
+    color: rgb(46,255,88);
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     text-align: center;
@@ -101,6 +102,10 @@ input:focus {
     padding: 1px;
 }
 
+.cardBody {
+    background-color: rgba(33, 58, 37, 0.8);
+}
+
 .cardGlow {
     -webkit-box-shadow:0px 0px 3px 3px rgba(46,255,88,0.9);
     -moz-box-shadow: 0px 0px 3px 3px rgba(46,255,88,0.9);
@@ -125,13 +130,14 @@ input:focus {
 
 .cardTitle {
     margin-top: 10px;
-    color: green;
+    color: rgb(46,255,88);
 }
 
 .cardInfo {
     color: black;
     font-weight: bold;
     margin-bottom: 15px;
+    color: rgb(46,255,88);
 }
 
 .separator {
@@ -173,7 +179,7 @@ input:focus {
   }
 
 .footerData {
-    padding: 40px
+    padding: 40px;
 }
 
 .devText {
@@ -189,12 +195,13 @@ input:focus {
 footer {
     margin-top: 20px;
     background-color: #1c331f;
+    opacity: 0.8;
     font-family: 'Roboto', sans-serif;
     font-weight: 50;
     font-size: 15px;
     padding: 10px;
     text-align: center;
-    color: rgb(163, 178, 168);
+    color: rgb(46,255,88);
   }
 
   /* -------- ANIMATIONS -------- */
