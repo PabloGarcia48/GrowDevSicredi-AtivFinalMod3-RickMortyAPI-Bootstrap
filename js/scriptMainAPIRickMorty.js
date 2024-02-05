@@ -65,8 +65,6 @@ async function fetchCharacters(page) {
 
 async function cardBuilder(characters) {
   const allCharacters = document.getElementById('divCards')
-  const separator1 = document.getElementById('separator')
-  let cardIndex = 0
   
   allCharacters.innerHTML = "" // limpa tudo na tela
   characters.forEach(async function _(character) { //preenche a tela de novo
@@ -86,13 +84,10 @@ async function cardBuilder(characters) {
             break;
         }
 
-        cardIndex += 1
-        
-        allCharacters.classList.add('divCard')
-
           allCharacters.innerHTML += `
           <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
             <div class="card h-100 cardGlow bg-transparent" id="trafficLightCard">
+            <h4 class="cardTitle">${character.id}</h4>
               <img src="${character.image}" class="card-img-top" alt="ImageNotFound">
               <div class="card-body cardBody">
                 <h4 class="cardTitle">${character.name}</h4>
@@ -101,7 +96,7 @@ async function cardBuilder(characters) {
                 <p class="cardText cardInfo" >${character.location.name}</p>
                 <p class="cardText" >Visto última vez em:</p>
                 <p class="cardText cardInfo" >${lastEpisodeName}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="./detailIndex.html" class="btn btn-outline-success">Veja Detalhes</a>
               </div>
             </div>
           </div>
