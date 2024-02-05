@@ -51,6 +51,7 @@ async function cardBuilderDetail(characterDetail) {
         <p class="cardText cardInfo" >${characterDetail.episode.length}</p>
         <p class="cardText" >API id:</p>
         <p class="cardText cardInfo" >${characterDetail.id}</p>
+        <a href="javascript:history.back()" class="btn btn-outline-success">Voltar</a>
       </div>
     </div>
   </div>
