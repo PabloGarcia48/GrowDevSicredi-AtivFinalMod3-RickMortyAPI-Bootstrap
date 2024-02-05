@@ -1,6 +1,7 @@
 let currentPage = 1
 let page = 1
 let totalPages = 42
+let characterID = 0
 
 
 const prevPage = document.getElementById('prevPage')
@@ -70,6 +71,7 @@ async function cardBuilder(characters) {
   characters.forEach(async function _(character) { //preenche a tela de novo
         const lastEpisode = character.episode[character.episode.length - 1]
         let lastEpisodeName = (await api.get(`${lastEpisode}`)).data.name //resultado da busca
+        characterID = character.id
 
         const characterStatus = character.status
         switch (characterStatus) {
@@ -87,7 +89,6 @@ async function cardBuilder(characters) {
           allCharacters.innerHTML += `
           <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
             <div class="card h-100 cardGlow bg-transparent" id="trafficLightCard">
-            <h4 class="cardTitle">${character.id}</h4>
               <img src="${character.image}" class="card-img-top" alt="ImageNotFound">
               <div class="card-body cardBody">
                 <h4 class="cardTitle">${character.name}</h4>
