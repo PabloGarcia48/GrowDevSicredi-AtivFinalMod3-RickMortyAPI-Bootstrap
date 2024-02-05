@@ -1,7 +1,6 @@
 let currentPage = 1
 let page = 1
 let totalPages = 42
-let characterID = 0
 
 
 const prevPage = document.getElementById('prevPage')
@@ -42,6 +41,11 @@ function nextPageFunc() {
   }
 }
 
+function catchID(element) {
+  const id = element.getAttribute('data-id')
+  localStorage.setItem('cardID', id);  
+}
+
 async function countPages() {
   try {
      totalPages = (await api.get(`/character`)).data.info.pages
@@ -71,7 +75,6 @@ async function cardBuilder(characters) {
   characters.forEach(async function _(character) { //preenche a tela de novo
         const lastEpisode = character.episode[character.episode.length - 1]
         let lastEpisodeName = (await api.get(`${lastEpisode}`)).data.name //resultado da busca
-        characterID = character.id
 
         const characterStatus = character.status
         switch (characterStatus) {
@@ -97,7 +100,7 @@ async function cardBuilder(characters) {
                 <p class="cardText cardInfo" >${character.location.name}</p>
                 <p class="cardText" >Visto última vez em:</p>
                 <p class="cardText cardInfo" >${lastEpisodeName}</p>
-                <a href="./detailIndex.html" class="btn btn-outline-success">Veja Detalhes</a>
+                <a href="./detailIndex.html" class="btn btn-outline-success" onclick="catchID(this)" data-id="${character.id}">Veja Detalhes</a>
               </div>
             </div>
           </div>

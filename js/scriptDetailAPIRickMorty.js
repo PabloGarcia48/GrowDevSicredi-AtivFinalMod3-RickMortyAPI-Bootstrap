@@ -1,8 +1,9 @@
+var cardID = localStorage.getItem('cardID');
 
-async function fetchCharacterDetail() {
+async function fetchCharacterDetail(cardID) {
     try {
-       const characterDetail = (await api.get(`/character/37`)).data //resultado da busca
-       cardBuilder(characterDetail)
+       const characterDetail = (await api.get(`/character/${cardID}`)).data //resultado da busca
+       cardBuilderDetail(characterDetail)
        console.log(characterDetail);
       }
     catch (error) {
@@ -10,7 +11,7 @@ async function fetchCharacterDetail() {
     }
   }
 
-async function cardBuilder(characterDetail) {
+async function cardBuilderDetail(characterDetail) {
   const cardDetail = document.getElementById('divCardsDetails')
   const pageTitleName = document.getElementById('pageTitle')
     const lastEpisode = characterDetail.episode[characterDetail.episode.length - 1]
@@ -56,4 +57,4 @@ async function cardBuilder(characterDetail) {
   `
 }
 
-fetchCharacterDetail()
+fetchCharacterDetail(cardID)
