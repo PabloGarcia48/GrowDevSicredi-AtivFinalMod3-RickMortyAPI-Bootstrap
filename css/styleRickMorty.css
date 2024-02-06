@@ -70,6 +70,7 @@ input {
     width: 50vw;
     height: 45px;
     border: solid 1px rgb(46,255,88);
+    color: rgb(46,255,88)
 }
 
 input::placeholder {
